@@ -1,0 +1,9 @@
+app:
+    build: .
+    command: npm start
+    ports:
+        - '8808:8808'
+        - '9876:9876'
+    volumes: 
+        - .:/home/app/ng2-fundamentals
+        - /home/app/ng2-fundamentals/node_modules
