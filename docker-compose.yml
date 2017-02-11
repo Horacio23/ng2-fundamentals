@@ -1,6 +1,5 @@
 app:
     build: .
-    command: npm start
     ports:
         - '8808:8808'
         - '9876:9876'
