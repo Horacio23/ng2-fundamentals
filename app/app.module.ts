@@ -1,17 +1,23 @@
+// Packages
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
+// Components
 import { EventsAppComponent }   from './events-app.component';
 import { EventsListComponent } from './events/events-list.component';
 import { EventThumbnailComponent } from './events/event-thumbnail.component';
 import { NavBarComponent } from './nav/navbar.component';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
 import { CreateEventComponent } from './events/create-event.component';
+import { Error404Component } from './errors/404.component';
 
+// Services
 import { EventService } from './events/shared/event.service';
 import { ToastrService } from './common/toastr.service';
+import { EventRouteActivator } from './events/event-details/event-details-activator.service';
 
+// Routes
 import { appRoutes } from './routes';
 
 @NgModule({
@@ -26,10 +32,12 @@ import { appRoutes } from './routes';
         NavBarComponent,
         EventDetailsComponent,
         CreateEventComponent,
+        Error404Component,
     ],
     providers: [
         EventService,
-        ToastrService
+        ToastrService,
+        EventRouteActivator,
     ],
     bootstrap: [EventsAppComponent],
 })
