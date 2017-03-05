@@ -14,7 +14,11 @@ export class AuthService {
     }
 
     isAuthenticated(){
-        return !!this.currentUser;
+        return !!this.currentUser; 
     }
-    constructor() { }
+
+    updateCurrentUser(firstName:string, lastName:string){
+        this.currentUser.firstname = firstName;
+        this.currentUser.lastname = lastName;
+    }
 }

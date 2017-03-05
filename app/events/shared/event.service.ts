@@ -6,7 +6,7 @@ import { IEvent } from './event.model';
 export class EventService {
     getEvents(): Observable<IEvent[]>{
       let subject = new Subject<IEvent[]>();
-      setTimeout(() => { subject.next(EVENTS); subject.complete(); }, 100)
+      setTimeout(() => { subject.next(EVENTS); subject.complete(); }, 10)
       return subject;
     }
 
@@ -153,7 +153,7 @@ const EVENTS: IEvent[] = [
     {
       id: 3,
       name: 'ng-conf 2037',
-      date: new Date('5/4/2037',)
+      date: new Date('5/4/2037'),
       time: '9:00 am',
       price: 759.00,
       imageUrl: '/app/assets/images/ng-conf.png',
